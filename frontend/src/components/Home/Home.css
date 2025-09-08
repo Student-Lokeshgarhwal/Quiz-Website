@@ -1,0 +1,50 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+.home{
+  background-color: rgb(142, 160, 215) ;
+  min-height: 100vh;
+}
+h1{
+  letter-spacing: .10rem;
+  padding: 10px;
+  text-align: center;
+  color: blue;
+}
+.content{
+  padding: 10px 30px;
+  /* border: red 2px solid; */
+}
+.content-head{
+  font-size: 21px;
+  text-align: left;
+  margin-bottom: 5px;
+
+  /* border: black 2px solid; */
+}
+
+.content-text{
+  font-size: 15px;
+  text-align: left;
+  /* border: black 2px solid; */
+}
+.button-section{
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 60vw;
+}
+.create-quiz-button, .take-quiz-button{
+  padding:10px 20px;
+  margin: 1% auto;
+  width: 40%;
+  border: 1px solid blue;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: rgb(142, 160, 215);
+  cursor: pointer;
+}

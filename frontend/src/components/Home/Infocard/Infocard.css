@@ -1,0 +1,22 @@
+.card{
+    /* border: 1px solid blue; */
+    background-color: rgb(102, 102, 193);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    width: 60vw;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    margin:10px auto;
+    padding: 10px 20px;
+}
+.card-title{
+    margin: 10px;
+}
+.quizlist{
+    color: blue;
+    text-decoration: underline;
+}
+.quizlist:visited{
+    color: blue;
+    text-decoration: underline;
+}

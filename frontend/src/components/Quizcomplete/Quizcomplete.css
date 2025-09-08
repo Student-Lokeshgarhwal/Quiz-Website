@@ -1,0 +1,50 @@
+.quizcomplete{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.result-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin: 15px 5px; */
+}
+.result-content img{
+    width: 50px;
+}
+.quizscore{
+    margin: 10px;
+    padding: 10px;
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+}
+.quizscore table{
+    width: 100%;
+}
+.quizscore thead tr th{
+    padding: 10px;
+    text-align: center;
+}
+.quizscore tbody tr td{
+    padding: 10px;
+    text-align: center;
+}
+.quizscore tbody tr td:last-child{
+    padding: 10px;
+    text-align: center;
+    
+}
+.quizscore tfoot tr td{
+    padding: 10px;
+    text-align: center;
+}
+.quizresultBtns button{
+    border: none;
+   background-color: rgb(71, 82, 115) ;
+   border-radius: 2px;
+   font-weight: 500;
+
+}
