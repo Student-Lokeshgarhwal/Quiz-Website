@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef } from 'react'
-import './Takequiz.css'
 import { useNavigate } from 'react-router-dom'
 import Quizcomplete from '../Quizcomplete/Quizcomplete'
 import { toast } from 'react-toastify'

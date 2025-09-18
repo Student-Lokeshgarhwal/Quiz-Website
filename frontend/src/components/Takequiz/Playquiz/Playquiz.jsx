@@ -73,7 +73,7 @@ function Playquiz({Quizzes,count,clicked,correctAns,totalquiz,lastquiz,disableBt
 
 
    return (
-        <div className='container'>
+        <div className='quicontainer'>
             {
                 Quizzes[count] &&
                 <div className='quiz-container'>

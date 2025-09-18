@@ -1,0 +1,142 @@
+/* Layout container */
+.quizListContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem;
+  /* background: linear-gradient(135deg, #e3f2fd, #fce4ec); */
+  background-image: url('/assets/backs3.jpg');
+  height: 100vh;
+}
+
+/* Sidebar: Table of Content */
+.tableOfContent {
+  width: 25%;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  padding:0 1.5rem;
+  transition: all 0.3s ease;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  position: relative;
+}
+
+/* Hide scrollbar */
+.tableOfContent::-webkit-scrollbar {
+  display: none;
+}
+.tableOfContent {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Sticky heading */
+.tableOfContent h2 {
+  font-size: 1.6rem;
+  /* margin-bottom: 1rem; */
+  color: #2c3e50;
+  border-bottom: 3px solid #00bcd4;
+  padding-bottom: 0.5rem;
+  /* border: 1px solid red; */
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  background-color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+/* Question links */
+.tableOfContent p {
+  margin: 0.5rem 0;
+  padding: 0.7rem 1rem;
+  background-color: #f3f4f6;
+  border-left: 5px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #34495e;
+  font-weight: 500;
+  position: relative;
+}
+
+.tableOfContent p:hover {
+  background-color: #e0f7fa;
+  border-left: 5px solid #00bcd4;
+  transform: translateX(6px);
+}
+
+/* Active question styling */
+.tableOfContent p.active {
+  background: linear-gradient(90deg, #b2ebf2, #e0f7fa);
+  border-left: 5px solid #00bcd4;
+  font-weight: 700;
+  color: #00796b;
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.4);
+  transform: scale(1.02);
+}
+
+/* Main quiz display */
+.quizList {
+  width: 70%;
+  background-color: #ffffff;
+  /* background-color: red;   */
+  border-bottom-right-radius: 8rem;
+  border-top-left-radius: 8rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Quiz card styling */
+.quizList .quizCard {
+  background: linear-gradient(135deg, #fffde7, #f0f4c3);
+  border: 2px solid #cddc39;
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 6px 16px rgba(205, 220, 57, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quizList .quizCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(205, 220, 57, 0.4);
+}
+
+/* Loading message */
+.quizList > div {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  width: 80%;
+  padding: 1.8rem;
+  background: linear-gradient(135deg, #e3f2fd, #fce4ec);
+
+}
+
+/* Smooth fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive tweaks */
+@media screen and (max-width: 768px) {
+  .quizListContainer {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .tableOfContent,
+  .quizList {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}

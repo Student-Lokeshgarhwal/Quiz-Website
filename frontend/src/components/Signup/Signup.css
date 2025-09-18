@@ -1,0 +1,122 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.signupbody {
+    background-color: #f2f2f2;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main container */
+.signupcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    height: 80vh;
+    /* border: 1px solid red; */
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.left-part {
+    flex: 2;
+    padding: 4rem;
+    /* border: 1px solid yellow; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left-part .lefthead {
+    font-size: larger;
+    font-weight: 600;
+    margin: 0.9rem;
+    word-break: normal;
+    overflow-wrap: normal;
+    white-space: nowrap;
+
+
+}
+
+/* Form styling */
+.left-part form {
+    display: flex;
+    flex-direction: column;
+}
+
+.left-part form label {
+    font-size: small;
+}
+
+.left-part input[type="text"] {
+    padding: 0.2rem 1rem;
+    margin-bottom: 0.01rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 0.8rem;
+}
+
+.left-part input[type="text"]:focus {
+    outline: none;
+    border-color: #4A90E2;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+}
+
+/* Button styling */
+.left-part button[type="submit"] {
+    padding: 0.5rem 0.75rem;
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.left-part button[type="submit"]:hover {
+    background-color: #357ABD;
+}
+
+.right-part {
+    background-color: #4A90E2;
+    color: white;
+    flex: 3;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.right-part h1 {
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+    color: white;
+}
+
+.right-part p {
+    font-size: small;
+    opacity: 0.8;
+}
+
+.right-part a {
+    color: blue;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.right-part a:hover {
+    text-decoration: underline;
+}

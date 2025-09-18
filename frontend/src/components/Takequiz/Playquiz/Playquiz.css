@@ -1,0 +1,113 @@
+/* Container for the whole quiz */
+.quicontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  min-height: 75vh;
+  /* padding: 20px; */
+  /* background: #9db3ca; */
+  background-image: url('/assets/takequizback.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Quiz card */
+.quiz-container {
+  width: 100%;
+  max-width: 400px;
+  background: rgba(170, 170, 175, 0.491);
+  padding: 20px ;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Question text */
+.question {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+  /* color: #1f2937; */
+  text-align: left;
+}
+
+/* Options */
+.options {
+  background: #f3f4f6;
+  padding: 4px 18px;
+  margin: 10px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-size: 1rem;
+  font-weight: 400;
+  border: 2px solid transparent;
+}
+
+.options:hover {
+  background: #d8d9db;
+  transform: scale(1.02);
+}
+
+.options:active {
+  transform: scale(0.98);
+}
+
+/* Buttons wrapper */
+.allbtns {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Button group */
+.btns {
+  display: flex;
+  gap: 15px;
+}
+
+/* General button style */
+.btns button {
+  padding: 10px 20px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btns button:hover:not(:disabled) {
+  background: #1e40af;
+  transform: translateY(-2px);
+}
+
+.btns button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* Quit button (red) */
+.btns button:nth-child(1) {
+  background: #dc2626;
+}
+
+.btns button:nth-child(1):hover:not(:disabled) {
+  background: #991b1b;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

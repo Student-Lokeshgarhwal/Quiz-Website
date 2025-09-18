@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './Header.css'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 function Header({user}) {
 
@@ -37,7 +37,10 @@ function Header({user}) {
                     {console.log(user)}
                     <p>{user.username}</p>
                 </div>
-                <div className="logout" onClick={handleLogout}>Logout</div>
+                <div className='sideContent'>
+                    <div><Link to={'/create-quiz'} className='createQuiz'>create↪ </Link></div>
+                <div className="logout" id="" onClick={handleLogout}>Logout</div>
+                </div>
             </div>
         </>
     )

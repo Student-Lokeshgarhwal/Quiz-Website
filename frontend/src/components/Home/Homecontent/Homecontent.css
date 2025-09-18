@@ -1,0 +1,76 @@
+.homeContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 90vh;
+    padding: 0 35px;
+}
+.home{
+    width: 55%;
+    min-height: 60vh;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+.heroImg{
+    width: 45%;
+   
+}
+.heroImg img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+   mix-blend-mode: multiply;  /* or 'darken' */
+  background-color: transparent;
+}
+.home h1{
+  letter-spacing: .20rem;
+  padding: 10px 0;
+  text-align: left;
+  color: rgb(53, 88, 169);
+
+}
+.content-head{
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+.content-text{
+    margin: 10px 0;
+    margin-top: 6px;
+  font-size: 13px;
+}
+.quiz-list-link{
+    color: blue;
+    text-decoration: underline;
+}
+.quiz-list-link:active{
+    color: blue;
+    text-decoration: underline;
+}
+
+.button-section{
+  margin: 10px 0;
+  /* border: 1px solid red; */
+  /* padding: 10px 20px; */
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 27rem;
+  gap: 10px;
+}
+.create-quiz-button, .take-quiz-button{
+  padding:6px 12px;
+  color: white;
+  border-radius: 20px;
+  text-align: center;
+  border: none;
+  font-size: 12px;
+ background-color: rgb(53, 88, 169);
+  cursor: pointer;
+}

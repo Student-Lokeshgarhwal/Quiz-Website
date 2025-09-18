@@ -22,19 +22,25 @@ function Quizcomplete({ correctAns, totalquiz }) {
     if (quizAgain) return <Takequiz />
 
     return (
-        <div className='quizcomplete'>
-            <h1>Quiz Results</h1>
+       <div className="quizcompletecontainer">
+         <div className='quizcomplete'>
+           <div className='result-content'>
+             <h1>Quiz Results</h1>
             {percent >= 60 ?
-                <div className='result-content'>
+                <div className='result'>
                     <img src="assets/pass.png" alt="passImage" />
+                    <p>{percent >= 60 ? "Pass" : "Fail"}</p>
                     <small>Good Job ! You have passed the quiz</small>
                 </div> :
-                <div className='result-content'>
+                <div className='result'>
                     <img src="assets/fail.png" alt="failImage" />
+                    <p>{percent >= 60 ? "Pass" : "Fail"}</p>
                     <small>Sorry ! You have failed the quiz</small> 
                 </div>
             }
-            <div className="quizscore">
+           </div>
+            <div className="summary">
+                <div className="quizscore">
                 <table border={"1"}>
                     <tbody>
                         <tr>
@@ -74,7 +80,9 @@ function Quizcomplete({ correctAns, totalquiz }) {
                 <button onClick={() => navigate('/')}>Go To Home</button>
                 <button onClick={quizAgainHandler}>Take Quiz Again</button>
             </div>
+            </div>
         </div>
+       </div>
     )
 }
 

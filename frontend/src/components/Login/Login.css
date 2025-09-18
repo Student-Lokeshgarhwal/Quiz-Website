@@ -1,0 +1,120 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.loginbody {
+  background-color: #f2f2f2;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main container */
+.logincontainer {
+  display: flex;
+  width: 65vw;
+  height: 75vh;
+  /* border: 1px solid red; */
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Left panel */
+.loginleft-panel {
+  background-color: #4A90E2;
+  color: white;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.loginleft-panel p:first-child {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.loginleft-panel p:last-child {
+  font-size: 0.7rem;
+  opacity: 0.9;
+}
+
+/* Right panel */
+.loginright-panel {
+  flex: 3;
+  padding: 3rem 4rem;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.loginright-panel p:first-child {
+  font-size: 1.2rem;
+  /* font-weight: 600; */
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* Form styling */
+.loginright-panel form {
+  display: flex;
+  flex-direction: column;
+}
+
+.loginright-panel input[type="text"] {
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.loginright-panel input[type="text"]:focus {
+  outline: none;
+  border-color: #4A90E2;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+}
+
+/* Button styling */
+.loginright-panel button[type="submit"] {
+  padding: 0.75rem;
+  background-color: #4A90E2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.loginright-panel button[type="submit"]:hover {
+  background-color: #357ABD;
+}
+
+/* Link and bottom text */
+.loginright-panel p:last-child {
+  font-size: 0.85rem;
+  color: #333;
+}
+
+.loginright-panel a {
+  color: #4A90E2;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.loginright-panel a:hover {
+  text-decoration: underline;
+}

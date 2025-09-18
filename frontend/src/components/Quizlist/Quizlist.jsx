@@ -5,6 +5,7 @@ import Quizcard from './Quizcard/Quizcard'
 function Quizlist() {
 
     const [allQuiz, setAllQuiz] = useState([])
+    const [count, setCount] = useState(0)
 
     useEffect(() => {
         const fetchQuizList = async () => {
@@ -25,16 +26,21 @@ function Quizlist() {
     }, [])
 
     return (
-        <div>
-            <h1>List of Quizzes</h1>
-            {allQuiz ?
-
-                allQuiz.map((quiz,i) => {
-                    return (
-                    <Quizcard quiz={quiz} key={quiz._id} i={i}/>
-                )})
-                : 'Fetching Quiz List...'}
+       <div className='quizListContainer'>
+       <div className='tableOfContent'>
+        <h2>Table Of List</h2>
+        {allQuiz.map((quiz,i)=>{
+            return(
+                <p key={i} onClick={()=>setCount(i)}>Question {i+1}</p>
+            )
+        })}
+       </div>
+        <div className='quizList'>
+            {allQuiz[count]  ?
+            <Quizcard quiz={allQuiz[count]}/>:<div>Fetching Quiz List...</div>
+            }
         </div>
+       </div>
     )
 }
 

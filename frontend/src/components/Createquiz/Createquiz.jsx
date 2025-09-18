@@ -43,35 +43,47 @@ function Createquiz() {
     }
 
   return (
-    <div>
-        <h1>Create Quiz</h1>
-        <form onSubmit={createQuizSubmitHandler}>
+    <div style={{ 
+  backgroundImage: "url('/assets/createbackimg.png')",
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+  backgroundRepeat:"no-repeat"
+}} className='createquizbody'>  
+<div className='part1'>
+  <h2>Got a quiz idea? Turn it into a challenge!</h2>
+  <p>Create your own quiz in minutes and let others test their knowledge, personality, or creativity. </p>
+  <img src="/assets/questionmark.png" alt="" className='questionmarkImg'/>
+</div>
+        <div className='part2'>
+          <h1>Create Quiz</h1>
+        <form onSubmit={createQuizSubmitHandler} className='createquizform'>
           <div className="formcontent">
-            <label htmlFor='question'>Question : </label><br />
+            {/* <label htmlFor='question'>Question : </label><br /> */}
             <input type="text" name="question" id='question' value={question} placeholder="Enter Quiz Question! " onChange={(e)=>setQuestion(e.target.value)}/><br />
             </div>
           <div className="formcontent">
-            <label htmlFor='optionfirst'>Option First : </label><br />
-            <input type="text" name="optionfirst" id='optionfirst' value={optionfirst} placeholder="Enter first option! " onChange={(e)=>setOptionfirst(e.target.value)}/><br />
+            {/* <label htmlFor='optionfirst'>Option First : </label><br /> */}
+            <input type="text" name="optionfirst" id='optionfirst' value={optionfirst} placeholder="first option" onChange={(e)=>setOptionfirst(e.target.value)}/><br />
 </div>
           <div className="formcontent">
-            <label htmlFor='optionsecond'>Option Scond :</label><br />
-            <input type="text" name="optionsecond" id='optionsecond' value={optionsecond} placeholder="Enter second option! " onChange={(e)=>setOptionsecond(e.target.value)}/><br />
+            {/* <label htmlFor='optionsecond'>Option Scond :</label><br /> */}
+            <input type="text" name="optionsecond" id='optionsecond' value={optionsecond} placeholder="second option" onChange={(e)=>setOptionsecond(e.target.value)}/><br />
 </div>
             <div className="formcontent">
-            <label htmlFor='optionthird'>Option Third :</label><br />
-            <input type="text" name="optionthird" id='optionthird' value={optionthird} placeholder="Enter third option! " onChange={(e)=>setOptionthird(e.target.value)}/><br />
+            {/* <label htmlFor='optionthird'>Option Third :</label><br /> */}
+            <input type="text" name="optionthird" id='optionthird' value={optionthird} placeholder="third option" onChange={(e)=>setOptionthird(e.target.value)}/><br />
 </div>
               <div className="formcontent">
-            <label htmlFor='optionfourth'>Option Fourth :</label><br />
-            <input type="text" name="optionfourth" id='optionfourth' value={optionfourth} placeholder="Enter fourth option! " onChange={(e)=>setOptionfourth(e.target.value)}/><br />
+            {/* <label htmlFor='optionfourth'>Option Fourth :</label><br /> */}
+            <input type="text" name="optionfourth" id='optionfourth' value={optionfourth} placeholder="fourth option" onChange={(e)=>setOptionfourth(e.target.value)}/><br />
 </div>
             <div className="formcontent">
-            <label htmlFor='answer'>Correct Answer : </label><br />
-            <input type="text" name="answer" id='answer' value={answer} placeholder="Enter correct answer! " onChange={(e)=>setAnswer(e.target.value)}/><br />
+            {/* <label htmlFor='answer'>Correct Answer : </label><br /> */}
+            <input type="text" name="answer" id='answer' value={answer} placeholder="correct answer" onChange={(e)=>setAnswer(e.target.value)}/><br />
             </div>
             <button type='submit'>Submit</button>
         </form>
+        </div>
     </div>
   )
 }

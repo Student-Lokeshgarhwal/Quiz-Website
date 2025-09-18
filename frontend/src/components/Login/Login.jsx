@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
 import './Login.css'
+import { Link, useNavigate } from 'react-router-dom';
 
 function Login() {
     const [email, setEmail] = useState('');
@@ -23,10 +23,8 @@ try{
         })
         const data =await response.json()
             if(response.status == 200){
-            console.log("login success! ",data)
             navigate('/')
             }else{
-                console.log("err to login! ",data)
                 setEmail('');
                 setPassword('');
                 navigate('/login')
@@ -37,16 +35,23 @@ try{
     }
 
     return (
-        <>
-        <h1>Login</h1>
+       <div className="loginbody">
+         <div className='logincontainer'>
+        <div className='loginleft-panel '>
+            <p>Hello Users!</p>
+            <p>Welcome back!</p>
+        </div>
+        <div className='loginright-panel'>
+            <p><b>Login</b> to your account</p>
             <form onSubmit={submitHandler}>
-                <label htmlFor="email">Email :</label>
-                <input type="text" name='email' value={email} id='email' placeholder='Enter email here: ' onChange={(e) => setEmail(e.target.value)} /><br />
-                <label htmlFor="password">Password :</label>
-                <input type="text" name='password' value={password} id='password' placeholder='Enter password here: ' onChange={(e) => setPassword(e.target.value)} /><br />
-                <button type='submit'>Submit</button>
+                <input type="text" name='email' value={email} id='email' placeholder='Email' onChange={(e) => setEmail(e.target.value)} /><br />
+                <input type="text" name='password' value={password} id='password' placeholder='Password' onChange={(e) => setPassword(e.target.value)} /><br />
+                    <button type='submit'>Login</button>
+                    <p>Don't have an account? <Link to={'/signup'}>Signup</Link></p>
             </form>
-        </>
+        </div>
+        </div>
+       </div>
     )
 }
 

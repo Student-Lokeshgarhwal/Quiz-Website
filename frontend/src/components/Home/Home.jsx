@@ -42,16 +42,16 @@ fetchData();
   },[])
 
  return(
-  <>
+  <div className='maincontainer'>
     <Header user={user} />
   { 
   loading ? 
   <div>Loading...</div>:
-  <Homecontent 
+  <div><Homecontent 
   user={user}
-  />
+  /></div>
   }
-  </>
+  </div>
  )
 }
 
