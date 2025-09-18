@@ -9,7 +9,7 @@ function Quizlist() {
 
     useEffect(() => {
         const fetchQuizList = async () => {
-            await fetch('http://localhost:5001/quiz', {
+            await fetch('https://quiz-website-rgfk.onrender.com/quiz', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',

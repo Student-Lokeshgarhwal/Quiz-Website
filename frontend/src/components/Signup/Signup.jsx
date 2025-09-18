@@ -16,7 +16,7 @@ function Signup() {
         e.preventDefault();
         const formData = { name, email, password, username };
         try {
-            const res = await fetch('http://localhost:5001/signup', {
+            const res = await fetch('https://quiz-website-rgfk.onrender.com/signup', {
                 method: 'POST',
                 credentials: "include",
                 headers: {

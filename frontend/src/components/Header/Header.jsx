@@ -9,7 +9,7 @@ function Header({user}) {
     const handleLogout =async (e)=>{
         console.log("clicked logout")
     try{
-       const res = await fetch('http://localhost:5001/logout',{
+       const res = await fetch('https://quiz-website-rgfk.onrender.com/logout',{
             method:'GET',
             headers:{
                 'Content-type':"application/json"

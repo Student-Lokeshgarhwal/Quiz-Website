@@ -16,7 +16,7 @@ function Playquiz({Quizzes,count,clicked,correctAns,totalquiz,lastquiz,disableBt
             setDisableBtn(false)
             console.log(option)
             try {
-                const response = await fetch(`http://localhost:5001/quiz/${option}`, {
+                const response = await fetch(`https://quiz-website-rgfk.onrender.com/quiz/${option}`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

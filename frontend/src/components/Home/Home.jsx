@@ -15,7 +15,7 @@ function Home() {
      const fetchData=async()=>{
   try{
       
-    const res = await fetch('http://localhost:5001',{
+    const res = await fetch('https://quiz-website-rgfk.onrender.com',{
       method:'GET',
       headers:{
         'Content-Type':"application/json"

@@ -24,7 +24,7 @@ function Takequiz() {
 useEffect(() => {
   const fetchQuizzes = async () => {
     try {
-      const res = await fetch('http://localhost:5001/quiz', {
+      const res = await fetch('https://quiz-website-rgfk.onrender.com/quiz', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',

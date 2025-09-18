@@ -15,7 +15,7 @@ function Createquiz() {
         e.preventDefault();
         const formData = {question,optionfirst,optionsecond,optionthird,optionfourth,answer}
         try{
-          const response = await fetch('http://localhost:5001/create',{
+          const response = await fetch('https://quiz-website-rgfk.onrender.com/create',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json'
