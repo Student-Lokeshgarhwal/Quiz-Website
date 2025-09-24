@@ -12,12 +12,27 @@ const PORT = process.env.PORT || 5001;
 
 connectDB();
 app.use(cors({
-    origin:[
-        'http://localhost:5001',
-        "https://quiz-website-rgfk.netlify.app"
-    ],
-    credentials:true
-}))
+  origin: function(origin, callback) {
+    // allow requests with no origin (like curl, Postman) or same-origin server calls
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) !== -1) {
+      return callback(null, true);
+    }
+    return callback(new Error('CORS not allowed by server'));
+  },
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
+// make sure express can answer preflight quickly
+app.options('*', cors());
+
+app.use((req, res, next) => {
+  console.log('Request origin:', req.headers.origin);
+  console.log('Cookies sent:', req.headers.cookie);
+  next();
+});
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
