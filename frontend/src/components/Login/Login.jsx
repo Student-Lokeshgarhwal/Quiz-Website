@@ -23,11 +23,11 @@ try{
         })
         const data =await response.json()
             if(response.status == 200){
-            navigate('https://quiz-website-rgfk.onrender.com/')
+            navigate('/')
             }else{
                 setEmail('');
                 setPassword('');
-                navigate('https://quiz-website-rgfk.onrender.com/login')
+                navigate('/login')
             }
     }catch(err){
         console.log(err)
