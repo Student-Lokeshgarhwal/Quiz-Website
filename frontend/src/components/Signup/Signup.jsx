@@ -56,7 +56,7 @@ function Signup() {
                 </div>
                 <div className="right-part">
                     <h1>Signup</h1>
-                        <p>Already have an account?<small onClick={()=>{navigate('https://quiz-website-rgfk.onrender.com/login')}}>Login</small></p>
+                        <p>Already have an account? <Link to={'/login'}>Login</Link></p>
                 </div>
             </div>
         </div>

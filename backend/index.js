@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 5001;
 connectDB();
 
 const allowedOrigins = [
-  "http://localhost:3000",          // local frontend
+  "http://localhost:5001",          // local frontend
   "https://serene-cat-642896.netlify.app", // your deployed frontend
 ];
 app.use(

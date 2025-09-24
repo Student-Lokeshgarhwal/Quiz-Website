@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef } from 'react'
-import { useNavigate } from 'react-router-dom'
 import Quizcomplete from '../Quizcomplete/Quizcomplete'
 import Playquiz from './Playquiz/Playquiz'
 
@@ -16,7 +15,6 @@ function Takequiz() {
     const [totalquiz, setTotalQuiz] = useState(1)
     const [finishquiz, setFinishQuiz] = useState(false)
 
-    const navigate = useNavigate()
 
  const hasInitialized = useRef(false); 
 

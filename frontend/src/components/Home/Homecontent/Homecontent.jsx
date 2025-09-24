@@ -17,8 +17,8 @@ function Homecontent({ user }) {
           </p>
         </div>
         <div className="button-section">
-          <button className="create-quiz-button" onClick={() => navigate('https://quiz-website-rgfk.onrender.com/create-quiz')}>Create Quiz</button>
-          <button className="take-quiz-button" onClick={() => navigate('https://quiz-website-rgfk.onrender.com/take-quiz')}>Take Quiz</button>
+          <button className="create-quiz-button" onClick={() => navigate('/create-quiz')}>Create Quiz</button>
+          <button className="take-quiz-button" onClick={() => navigate('/take-quiz')}>Take Quiz</button>
         </div>
       </div>
       <div className='heroImg'>
