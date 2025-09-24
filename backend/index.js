@@ -11,19 +11,26 @@ const app = express();
 const PORT = process.env.PORT || 5001;
 
 connectDB();
-app.use(cors({
-  origin: function(origin, callback) {
-    // allow requests with no origin (like curl, Postman) or same-origin server calls
-    if (!origin) return callback(null, true);
-    if (allowedOrigins.indexOf(origin) !== -1) {
-      return callback(null, true);
-    }
-    return callback(new Error('CORS not allowed by server'));
-  },
-  credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
-}));
+
+const allowedOrigins = [
+  "http://localhost:3000",          // local frontend
+  "https://serene-cat-642896.netlify.app", // your deployed frontend
+];
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      console.log("Request origin:", origin); // debug
+
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true, // allow cookies/auth headers
+  })
+);
+
 
 app.use((req, res, next) => {
   console.log('Request origin:', req.headers.origin);
