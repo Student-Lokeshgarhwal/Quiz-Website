@@ -56,7 +56,7 @@ function Signup() {
                 </div>
                 <div className="right-part">
                     <h1>Signup</h1>
-                        <p>Already have an account?<Link to={'https://quiz-website-rgfk.onrender.com/login'}>Login</Link></p>
+                        {/* <p>Already have an account?<Link to={'https://quiz-website-rgfk.onrender.com/login'}>Login</Link></p> */}
                 </div>
             </div>
         </div>
