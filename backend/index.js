@@ -25,9 +25,6 @@ app.use(cors({
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
-// make sure express can answer preflight quickly
-app.options('*', cors());
-
 app.use((req, res, next) => {
   console.log('Request origin:', req.headers.origin);
   console.log('Cookies sent:', req.headers.cookie);
