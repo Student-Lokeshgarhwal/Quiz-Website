@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Quizcomplete from '../Quizcomplete/Quizcomplete'
-import { toast } from 'react-toastify'
 import Playquiz from './Playquiz/Playquiz'
 
 function Takequiz() {

@@ -25,7 +25,7 @@ function Home() {
     console.log(res)
     const data = await res.json()
     if(res.status != 200){
-     return navigate('/login')
+     return navigate('https://quiz-website-rgfk.onrender.com/login')
     }
     else{
       console.log("Welcome to home page! ",data)
@@ -33,7 +33,7 @@ function Home() {
     }
   }catch(err){
   console.log("err : ", err)
-  navigate('/login')
+  navigate('https://quiz-website-rgfk.onrender.com/login')
 }finally{
   setLoading(false)
 }

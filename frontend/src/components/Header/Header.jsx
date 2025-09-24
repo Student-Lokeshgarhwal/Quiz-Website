@@ -20,7 +20,7 @@ function Header({user}) {
         console.log("data : ",data)
         if(res.status == 200){
             localStorage.removeItem("QuizResult")
-            navigate('/login')
+            navigate('https://quiz-website-rgfk.onrender.com/login')
         }
         
     }catch(err){

@@ -28,10 +28,10 @@ function Signup() {
 
             if (res.status != 200) {
                 toast.success(data.msg)
-                navigate('/signup')
+                navigate('https://quiz-website-rgfk.onrender.com/signup')
             } else {
                 toast.success(data.msg)
-                navigate('/')
+                navigate('https://quiz-website-rgfk.onrender.com/')
             }
         } catch (err) {
             toast.error("server side error! ")

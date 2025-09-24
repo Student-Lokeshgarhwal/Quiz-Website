@@ -6,7 +6,6 @@ const setUser =async (user) => {
         id: user.id,
         username: user.username
     }, process.env.SECRET_KEY)
-
 }
 
 const getUser = async(token)=>{
