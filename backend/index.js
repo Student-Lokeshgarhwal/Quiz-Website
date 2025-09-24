@@ -14,7 +14,7 @@ connectDB();
 app.use(cors({
     origin:[
         'http://localhost:5001',
-        "https://serene-cat-642896.netlify.app"
+        "https://quiz-website-rgfk.netlify.app"
     ],
     credentials:true
 }))
